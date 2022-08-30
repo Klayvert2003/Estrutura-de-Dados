@@ -1,0 +1,8 @@
+Ex. 1)
+a)G = 5, E = 10   b)G = 8, E = 13   c)G = 4, E = 6.
+b)C.
+c)A, B.
+d)V(G){(v1,v2,v3,v4,v5)} 
+V(E){(v1,v2);(v1,v4);(v1,v5);(v2,v5);(v3,v5);(v4,v3);(v4,v5)}
+e)Vértices adjacentes: v4,v5,v1,v2. 
+Arestas adjacentes: (v5,v4); (v3,v4);(v2,v3);(v5,v1); (v3,v1).

@@ -1,0 +1,7 @@
+1) (b) e (c).
+2)todos são.
+3)a)Euleriano.  b)Hamiltoniano.  c)Hamiltoniano.
+4)Seria possivel apenas no caso (b), pois não há necessidade de repetir arestas, ja no
+caso (c) é necessário.
+5)Não é possível no caso (b), pois é necessária a repetição de vértices, ja no caso (c)
+é possível.

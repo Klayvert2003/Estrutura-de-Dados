@@ -1,0 +1,10 @@
+1) a)é regular porque possui a mesma quantidade de arestas em ambos vértices.
+   b)é irregular pois não possui a mesma quantidade de arestas em ambos vértices.
+
+2) Din(v1) = 2, Din(v2) = 1, Din(v3) = 4, Din(v4) = 3.
+   Dout(v1) = 3, Dout(v2) = 2, Dout(v3)=1, Dout(v4)=0.
+
+3) sumidouro = v4. fonte = v5.
+
+4) V(G){(v1,v2,v3,v4,v5)}
+   E(G){(v1,v4);(v1,v3);(v2,v1);(v2,v3);(v3,v4);(v5,v4);(v5,v2);(v5,v1);(v5,v3)}
