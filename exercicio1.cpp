@@ -1,17 +1,23 @@
-#include<iostream>
-#include<cstdlib>
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
 
 using namespace std;
 
-main()
+ 
+int main(void)
 {
-    int soma=0, num;
-
-    for (num=1;num<=100;num++)
-    	soma=soma+num;
-	
-    cout << endl << " O TOTAL DA SOMA EM: 	" << soma ; 
-    cout << "\n\n" ; 
-    system("pause");
-    return(0);
+    float raio, altura, volume;
+ 
+    cout << "RAIO   = "; cin >> raio;
+    
+    
+    cout << "ALTURA = "; cin >> altura;
+    
+ 
+    volume = 3.14159 * raio * raio * altura;
+ 
+    cout << "VOLUME = " << volume;
+    
+    return 0;
 }
