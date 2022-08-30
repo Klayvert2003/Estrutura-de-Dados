@@ -1,0 +1,79 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+typedef int elem;
+
+typedef struct bloco{
+        elem info;
+        struct bloco *prox;
+}no;
+
+typedef struct {
+        no *topo;
+        int total;
+} Pilha;
+
+void Create_Stack(Pilha *P);
+void Push(Pilha *P, elem *X, bool *erro);
+void Pop(Pilha*, elem* X, bool *erro);
+bool IsEmpty_Stack(Pilha *P);
+void Print_Stack(Pilha *P);
+
+
+void Create_Stack(Pilha *P) {
+    P->topo=NULL;
+    P->total=0;
+}
+void Push(Pilha *P, elem *X, bool *erro) {
+    no *aux=NULL;
+    aux = (no*)malloc(sizeof(no));
+    /* se eu não conseguir criar o aux é porque a memória está com espaço cheio, 
+	por isso não precisa da função IsFull
+	*/
+	if (aux==NULL) 
+    	*erro=true;
+    else{
+        *erro=false;
+        aux->info = *X;
+
+        // se for o primeiro bloco, então o prox do 1ª bloco acaba apontando para NULL
+        // se não for o primeiro, então o prox do 1ª bloco acaba apontando para o topo da pilha
+        aux->prox = P->topo; 
+
+        P->topo = aux;
+        P->total++;
+    }
+}
+
+
+elem X;
+void Pop(Pilha *P, bool *erro) {
+    if(!IsEmpty_Stack(P)){
+        X = P->topo->info;
+        P->topo = P->topo->prox;
+        P->total--;
+        *erro = false;
+    }
+    *erro=true;
+}     
+
+bool IsEmpty_Stack(Pilha *P) {
+    if(P->total==0)
+       return true;
+	return false;
+}
+
+
+void Print_Stack(Pilha *P){
+	no *aux;
+	aux = P->topo;
+	int total = P->total;
+	cout << endl<< "Elementos da Pilha (do topo até a base): " << endl;
+	while(total>0)
+	{
+		cout << aux->info << endl;
+		aux = aux->prox;
+		total--;
+	}
+}
